@@ -1,0 +1,15 @@
+<% if @data %>
+  <h1><%= @data[:name] %></h1>
+  <p><%= @data[:headline] %></p>
+  <p><%= @data[:location] %></p>
+
+  <h2>Education</h2>
+  <% @data[:education].each do |item| %>
+    <p><strong><%= item[:degree] %></strong></p>
+    <p><%= item[:school] %></p>
+    <p><%= item[:date] %></p>
+  <% end %>
+<% else %>
+  <p>Profile not found.</p>
+<% end %>
+

@@ -1,0 +1,6 @@
+<h1>Enter LinkedIn Profile URL</h1>
+
+<%= form_tag(profile_scrappers_create_path, method: :post) do %>
+  <%= text_field_tag(:url, params[:url], placeholder: "Enter LinkedIn Profile URL") %>
+  <%= submit_tag("Scrape Profile") %>
+<% end %>
